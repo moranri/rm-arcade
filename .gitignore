@@ -1,0 +1,27 @@
+# Publish only the game, its tests, and deployment documentation.
+/*
+!/.gitignore
+!/.github/
+!/.github/**
+!/README.md
+!/site/
+!/site/**
+!/tests/
+!/tests/**
+
+# Never publish credentials, local state, coursework evidence, or recordings.
+**/.env
+**/.env.*
+**/node_modules/
+**/.vercel/
+**/.DS_Store
+**/Thumbs.db
+**/*.pem
+**/*.key
+**/*.log
+**/*.mp4
+**/*.zip
+/Submission/
+/evidence/
+/reports/
+
