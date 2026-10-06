@@ -12,7 +12,7 @@
   let model=new cfg.Model(),keys={},last=0,lastPaint=0,previousState='ready',endHandled=false,sound=false,audio=null,saved=false,storageOK=true,pointer=null,scoreList=[];
   const storageKey='rm-arcade-v1-'+key;
   try{scoreList=A.scores(localStorage.getItem(storageKey));}catch{storageOK=false;}
-  document.title=cfg.title+' — Ricardo Moran | RM Arcade';$('title').textContent=cfg.title;$('genre').textContent=cfg.genre;$('mission-title').textContent=cfg.missionTitle;$('mission').textContent=cfg.mission;
+  document.title=cfg.title+' — Ricardo Moran · Ivelisse Wright · Nicole Edzaguirre | RM Arcade';$('title').textContent=cfg.title;$('genre').textContent=cfg.genre;$('mission-title').textContent=cfg.missionTitle;$('mission').textContent=cfg.mission;
   document.querySelectorAll('nav a').forEach(a=>{if(a.getAttribute('href').endsWith('='+key))a.setAttribute('aria-current','page');});
   for(const [action,shortcut]of cfg.controls){const div=document.createElement('div');div.className='control-row';const label=document.createElement('span');label.textContent=action;const k=document.createElement('kbd');k.textContent=shortcut;div.append(label,k);$('controls').append(div);}
   cfg.notes.forEach(note=>{const li=document.createElement('li');li.textContent=note;$('notes').append(li);});
